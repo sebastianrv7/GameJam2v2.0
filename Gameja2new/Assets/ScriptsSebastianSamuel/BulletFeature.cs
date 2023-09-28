@@ -31,9 +31,9 @@ public class BulletFeature : MonoBehaviour
 
     private void DestrouOutOfBounds()
     {
-        if (gameObject.transform.position.x >50 || gameObject.transform.position.x > 50 || gameObject.transform.position.y > 50 || gameObject.transform.position.y < 50)
-        {
-            Destroy(gameObject);
-        }
+        //if (gameObject.transform.position.x >50 || gameObject.transform.position.x > 50 || gameObject.transform.position.y > 50 || gameObject.transform.position.y < 50)
+        //{
+          //  Destroy(gameObject);
+        //}
     }
 }
