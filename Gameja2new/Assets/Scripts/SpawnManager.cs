@@ -12,9 +12,6 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] 
     GameObject[] zombie;
 
-    [SerializeField] 
-    GameObject[] Medicine;
-
     [SerializeField]
     float spawnRate = 5f;
     [SerializeField]

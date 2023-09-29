@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickMedicine : MonoBehaviour
 {
-    public GameObject time;
     private Timer timerScript;
 
 
@@ -19,11 +18,6 @@ public class PickMedicine : MonoBehaviour
         {
             timerScript.AddTime();
             Destroy(collision.gameObject);
-            Debug.Log("hay colision");
-
         }
-
-
     }
-
 }
