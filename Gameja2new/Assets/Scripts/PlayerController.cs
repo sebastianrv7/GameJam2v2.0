@@ -6,11 +6,25 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float defaultSpeed = 12.5f;
 
+<<<<<<< HEAD:Gameja2new/Assets/Scripts/PlayerController.cs
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+=======
+    private Rigidbody2D rb2D;
+    
+    public GameObject time;
+    private Timer timerScript;
+
+    private void Start()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+        
+        timerScript = FindObjectOfType<Timer>();
+
+>>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/PlayerControllerSebastian2D.cs
     }
 
     void Update()
@@ -34,5 +48,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
+
+
     }
+
+    
+   
 }

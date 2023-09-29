@@ -19,5 +19,22 @@ public class PickMedicine : MonoBehaviour
             timerScript.AddTime();
             Destroy(collision.gameObject);
         }
+<<<<<<< HEAD:Gameja2new/Assets/Scripts/PickMedicine.cs
     }
+=======
+
+        if (collision.CompareTag("Zombie"))
+        {
+            timerScript.LessTime();
+            Destroy(collision.gameObject);
+            Debug.Log("Te mordió el zombie");
+
+        }
+
+
+    }
+
+
+
+>>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/PickMedicine.cs
 }

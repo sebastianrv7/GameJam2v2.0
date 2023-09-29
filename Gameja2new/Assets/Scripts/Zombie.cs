@@ -17,6 +17,9 @@ public class Zombie : MonoBehaviour
     Timer timerScript;
     Rigidbody2D rb;
     Vector3 moveDirection;
+    private GameManager gameManager;
+    public GameObject medicine;
+
 
     [SerializeField]
     int health = 1;
@@ -31,6 +34,7 @@ public class Zombie : MonoBehaviour
         timerScript = FindAnyObjectByType<Timer>();
 
         tarjet = GameObject.FindGameObjectWithTag("Player").transform;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     private void Update()
@@ -53,9 +57,11 @@ public class Zombie : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
+            Debug.Log("le diste");
+            gameManager.AddZombieLoopCount();
+            
             TakeDamage();
-            Debug.Log("hay tiroteo");
-
+    
         }
 
         if (collision.CompareTag("Player"))
