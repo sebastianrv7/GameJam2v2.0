@@ -11,7 +11,6 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        
         UpdateTimerText(elapsedTime); // Mostrar el tiempo inicial
     }
 
@@ -61,6 +60,11 @@ public class Timer : MonoBehaviour
     public void AddTime()
     {
         elapsedTime += 30f;
+    }
+
+    public void SubstractTime()
+    {
+        elapsedTime -= 10f;
     }
 
 }

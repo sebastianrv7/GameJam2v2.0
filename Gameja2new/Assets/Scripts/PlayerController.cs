@@ -2,39 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float defaultSpeed = 12.5f;
 
-
-    private Rigidbody rb;
-
+    private Rigidbody2D rb;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Here are the inputs for the movement of the character
-
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        // This creates a rotation on the Player to always look at the mouse.
-
+        // Mira hacia la posición del mouse
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 direction = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
 
         transform.up = direction;
 
-
-        // This is the conditions for the movement to happen 
-
+        // Aplica el movimiento usando Rigidbody2D
         if (verticalInput != 0 || horizontalInput != 0)
         {
             rb.velocity = new Vector2(horizontalInput * defaultSpeed, verticalInput * defaultSpeed);
@@ -43,6 +34,5 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-
     }
 }
