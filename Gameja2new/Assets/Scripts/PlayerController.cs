@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerSebastian2D : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float defaultSpeed = 12.5f;
 
+<<<<<<< HEAD:Gameja2new/Assets/Scripts/PlayerController.cs
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+=======
     private Rigidbody2D rb2D;
     
     public GameObject time;
@@ -17,6 +24,7 @@ public class PlayerControllerSebastian2D : MonoBehaviour
         
         timerScript = FindObjectOfType<Timer>();
 
+>>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/PlayerControllerSebastian2D.cs
     }
 
     void Update()
@@ -34,11 +42,11 @@ public class PlayerControllerSebastian2D : MonoBehaviour
         // Aplica el movimiento usando Rigidbody2D
         if (verticalInput != 0 || horizontalInput != 0)
         {
-            rb2D.velocity = new Vector2(horizontalInput * defaultSpeed, verticalInput * defaultSpeed);
+            rb.velocity = new Vector2(horizontalInput * defaultSpeed, verticalInput * defaultSpeed);
         }
         else
         {
-            rb2D.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
         }
 
 

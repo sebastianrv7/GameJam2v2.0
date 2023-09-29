@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        
         UpdateTimerText(elapsedTime); // Mostrar el tiempo inicial
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
@@ -66,6 +65,13 @@ public class Timer : MonoBehaviour
         elapsedTime += 30f;
     }
 
+<<<<<<< HEAD:Gameja2new/Assets/Scripts/Timer.cs
+    public void SubstractTime()
+    {
+        elapsedTime -= 10f;
+    }
+
+=======
     public void LessTime()
     {
         elapsedTime -= 30f;
@@ -80,4 +86,5 @@ public class Timer : MonoBehaviour
         }
     }
     
+>>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/Timer.cs
 }

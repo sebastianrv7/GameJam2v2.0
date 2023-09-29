@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickMedicine : MonoBehaviour
 {
-    public GameObject time;
     private Timer timerScript;
 
 
@@ -19,9 +18,10 @@ public class PickMedicine : MonoBehaviour
         {
             timerScript.AddTime();
             Destroy(collision.gameObject);
-            Debug.Log("hay colision");
-
         }
+<<<<<<< HEAD:Gameja2new/Assets/Scripts/PickMedicine.cs
+    }
+=======
 
         if (collision.CompareTag("Zombie"))
         {
@@ -36,4 +36,5 @@ public class PickMedicine : MonoBehaviour
 
 
 
+>>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/PickMedicine.cs
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1624294129327751220}
   - component: {fileID: 2668468337468701668}
   m_Layer: 0
-  m_Name: ZombieSebastian
+  m_Name: Zombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.1, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1.82, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -172,7 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  zombieLoopCount: 0
-  zombieToMedicine: 5
-  medicine: {fileID: 372762671397393682, guid: f6d040232dbfc724d8ee09d4b55bb5bc, type: 3}
+  medicine: {fileID: 4837884426213454079, guid: 2c82f4e0055837049936f7c11827ac57, type: 3}
   health: 1

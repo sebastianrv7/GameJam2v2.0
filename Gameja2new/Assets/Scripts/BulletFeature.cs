@@ -5,20 +5,31 @@ using UnityEngine;
 public class BulletFeature : MonoBehaviour
 {
     public float velocidad = 10f; // Velocidad de la bala en unidades por segundo
-    
+    float time;
+    [SerializeField] float destroyTime = 2.5f;
 
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
     }
 
     private void Update()
     {
         transform.Translate(Vector2.up * velocidad * Time.deltaTime);
-        DestrouOutOfBounds();
+
+    }
+
+    private void FixedUpdate()
+    {
+        time += Time.fixedDeltaTime;
+
+        if (time >= destroyTime)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,11 +40,4 @@ public class BulletFeature : MonoBehaviour
         }
     }
 
-    private void DestrouOutOfBounds()
-    {
-        //if (gameObject.transform.position.x >50 || gameObject.transform.position.x > 50 || gameObject.transform.position.y > 50 || gameObject.transform.position.y < 50)
-        //{
-          //  Destroy(gameObject);
-        //}
-    }
 }

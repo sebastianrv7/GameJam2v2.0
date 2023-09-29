@@ -9,7 +9,12 @@ public class Zombie : MonoBehaviour
     [SerializeField] 
     float moveSpeed = 2f;
 
+    [SerializeField] GameObject medicine;
+
+    int bingo;
+
     Transform tarjet;
+    Timer timerScript;
     Rigidbody2D rb;
     Vector3 moveDirection;
     private GameManager gameManager;
@@ -26,6 +31,8 @@ public class Zombie : MonoBehaviour
 
     private void Start()
     {
+        timerScript = FindAnyObjectByType<Timer>();
+
         tarjet = GameObject.FindGameObjectWithTag("Player").transform;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
@@ -82,12 +89,18 @@ public class Zombie : MonoBehaviour
         {
             // Put some animations, sounds  and juice HERE
             Destroy(gameObject);
+
+            bingo = Random.Range(0, 3);
+            switch (bingo) {
+                case 2: 
+                    Instantiate(medicine,transform.position, Quaternion.identity);
+                    break;
+            }
         }
     }
 
     void InfectPlayer()
     {
-        //// Restar x al tiempo restante de conversión a zombie
-        //// Zombie make an attack animation if collied with player
+        timerScript.SubstractTime();
     }
 }
