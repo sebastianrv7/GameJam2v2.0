@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     float spawnRate = 5f;
     [SerializeField]
-    float spawnRadius = 10f;
+    float spawnRadius = 20f;
 
     Timer timer;
     Vector2 playerPos;
@@ -35,7 +35,7 @@ public class SpawnManager : MonoBehaviour
 
     Vector2 RandomSpawnPosition()
     {
-        float distance = Random.Range(5f, 10f);
+        float distance = spawnRadius;
         float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
         Vector2 relativePos = new (Mathf.Cos(angle) * distance, Mathf.Sin(angle) * distance);
         Vector2 randomPos = relativePos + playerPos;
