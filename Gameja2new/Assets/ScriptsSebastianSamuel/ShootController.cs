@@ -14,6 +14,8 @@ public class ShootController : MonoBehaviour
         {
             Shoot();
             tiempoUltimoDisparo = Time.time; // Actualiza el tiempo del último disparo
+
+
         }
     }
 
