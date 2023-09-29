@@ -23,7 +23,17 @@ public class PickMedicine : MonoBehaviour
 
         }
 
+        if (collision.CompareTag("Zombie"))
+        {
+            timerScript.LessTime();
+            Destroy(collision.gameObject);
+            Debug.Log("Te mordió el zombie");
+
+        }
+
 
     }
+
+
 
 }

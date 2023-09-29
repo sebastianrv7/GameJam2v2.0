@@ -7,10 +7,16 @@ public class PlayerControllerSebastian2D : MonoBehaviour
     [SerializeField] private float defaultSpeed = 12.5f;
 
     private Rigidbody2D rb2D;
+    
+    public GameObject time;
+    private Timer timerScript;
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        
+        timerScript = FindObjectOfType<Timer>();
+
     }
 
     void Update()
@@ -34,5 +40,10 @@ public class PlayerControllerSebastian2D : MonoBehaviour
         {
             rb2D.velocity = Vector2.zero;
         }
+
+
     }
+
+    
+   
 }

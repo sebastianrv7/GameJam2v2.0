@@ -5,14 +5,16 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
-    private float elapsedTime = 60f; // Inicializar el tiempo con 2 minutos (120 segundos)
+    public float elapsedTime = 60f; // Inicializar el tiempo con 2 minutos (120 segundos)
     public bool isRunning = true; // Comenzar el temporizador inmediatamente
+    private GameManager gameManager;
 
 
     private void Start()
     {
         
         UpdateTimerText(elapsedTime); // Mostrar el tiempo inicial
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void StopTimer()
@@ -34,8 +36,9 @@ public class Timer : MonoBehaviour
 
             UpdateTimerText(elapsedTime);
         }
+        ItsOver();
 
-       
+
     }
     
     private void UpdateTimerText(float timeInSeconds)
@@ -63,4 +66,18 @@ public class Timer : MonoBehaviour
         elapsedTime += 30f;
     }
 
+    public void LessTime()
+    {
+        elapsedTime -= 30f;
+    }
+
+    private void ItsOver()
+    {
+        if (elapsedTime <= 0)
+        {
+            gameManager.GameOver();
+            
+        }
+    }
+    
 }
