@@ -18,7 +18,7 @@ public class Zombie : MonoBehaviour
     Rigidbody2D rb;
     Vector3 moveDirection;
     private GameManager gameManager;
-    public GameObject medicine;
+    
 
 
     [SerializeField]
@@ -47,18 +47,14 @@ public class Zombie : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-        
-    }
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
         {
             Debug.Log("le diste");
-            gameManager.AddZombieLoopCount();
+            
             
             TakeDamage();
     

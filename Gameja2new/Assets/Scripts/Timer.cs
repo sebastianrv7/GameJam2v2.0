@@ -65,17 +65,14 @@ public class Timer : MonoBehaviour
         elapsedTime += 30f;
     }
 
-<<<<<<< HEAD:Gameja2new/Assets/Scripts/Timer.cs
-    public void SubstractTime()
-    {
-        elapsedTime -= 10f;
-    }
 
-=======
-    public void LessTime()
+    public void SubstractTime()
     {
         elapsedTime -= 30f;
     }
+
+
+   
 
     private void ItsOver()
     {
@@ -86,5 +83,5 @@ public class Timer : MonoBehaviour
         }
     }
     
->>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/Timer.cs
+
 }
