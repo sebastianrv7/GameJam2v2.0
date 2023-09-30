@@ -5,10 +5,15 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
-    public float elapsedTime = 60f; // Inicializar el tiempo con 2 minutos (120 segundos)
-    public bool isRunning = true; // Comenzar el temporizador inmediatamente
-    private GameManager gameManager;
 
+    [Header("Time Variables")]
+    public float elapsedTime = 60f; // Inicializar el tiempo con 2 minutos (120 segundos)
+    [SerializeField] float extraTime = 15f;
+
+    [Header("State")]
+    public bool isRunning = true; // Comenzar el temporizador inmediatamente
+    
+    private GameManager gameManager;
 
     private void Start()
     {
@@ -61,7 +66,7 @@ public class Timer : MonoBehaviour
 
     public void AddTime()
     {
-        elapsedTime += 30f;
+        elapsedTime += extraTime;
     }
 
     public void SubstractTime()

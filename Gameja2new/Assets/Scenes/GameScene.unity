@@ -954,6 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1632138776}
   elapsedTime: 60
+  extraTime: 15
   isRunning: 1
 --- !u!1 &1400266786
 GameObject:
@@ -1230,8 +1231,8 @@ RectTransform:
   m_GameObject: {fileID: 1528611813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.57, y: 1.57, z: 1.57}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1400266787}
   - {fileID: 2117750665}
@@ -1656,6 +1657,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626130302508680260, guid: 2531a428a8b9031499cf5845cf749da5, type: 3}
+      propertyPath: defaultSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5470270249428476196, guid: 2531a428a8b9031499cf5845cf749da5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09
