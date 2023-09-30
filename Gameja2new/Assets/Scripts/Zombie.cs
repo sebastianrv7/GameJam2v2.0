@@ -35,7 +35,7 @@ public class Zombie : MonoBehaviour
         animator = GetComponent<Animator>();
 
         tarjet = GameObject.FindGameObjectWithTag("Player").transform;
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
