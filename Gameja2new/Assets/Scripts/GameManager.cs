@@ -7,23 +7,15 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI gameOverText;
-    public Button restartButton;
-    public bool isGameActive;
-    private GameManager gameManager;
-    public int zombieToMedicine = 5;
-    public int zombieLoopCount = 0;
+    [SerializeField] GameObject gameOverUI;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-    }
+    public bool isGameActive = true;
+    //public int zombieToMedicine = 5;
+    //public int zombieLoopCount = 0;
 
     public void GameOver()
     {
-        gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
+        gameOverUI.gameObject.SetActive(true);
         isGameActive = false;
     }
 
@@ -32,19 +24,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void AddZombieLoopCount()
-    {
-        zombieLoopCount = zombieLoopCount+1;
-        
+    //public void AddZombieLoopCount()
+    //{
+    //    zombieLoopCount = zombieLoopCount + 1;
 
-        if (zombieToMedicine == zombieLoopCount)
-        {
-            Debug.Log("hay medicina");
-            
-            zombieToMedicine++;
-            zombieLoopCount = 0;
-        }
-        
-    }
 
+    //    if (zombieToMedicine == zombieLoopCount)
+    //    {
+    //        Debug.Log("hay medicina");
+
+    //        zombieToMedicine++;
+    //        zombieLoopCount = 0;
+    //    }
+    //}
 }

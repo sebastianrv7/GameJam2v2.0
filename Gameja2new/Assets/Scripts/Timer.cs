@@ -16,10 +16,6 @@ public class Timer : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    public void StopTimer()
-    {
-        isRunning = false;
-    }
 
     private void Update()
     {
@@ -36,10 +32,13 @@ public class Timer : MonoBehaviour
             UpdateTimerText(elapsedTime);
         }
         ItsOver();
-
-
     }
     
+    public void StopTimer()
+    {
+        isRunning = false;
+    }
+
     private void UpdateTimerText(float timeInSeconds)
     {
         int minutes = Mathf.FloorToInt(timeInSeconds / 60);
@@ -65,14 +64,7 @@ public class Timer : MonoBehaviour
         elapsedTime += 30f;
     }
 
-<<<<<<< HEAD:Gameja2new/Assets/Scripts/Timer.cs
     public void SubstractTime()
-    {
-        elapsedTime -= 10f;
-    }
-
-=======
-    public void LessTime()
     {
         elapsedTime -= 30f;
     }
@@ -82,9 +74,6 @@ public class Timer : MonoBehaviour
         if (elapsedTime <= 0)
         {
             gameManager.GameOver();
-            
         }
-    }
-    
->>>>>>> sebastian:Gameja2new/Assets/ScriptsSebastianSamuel/Timer.cs
+    }    
 }

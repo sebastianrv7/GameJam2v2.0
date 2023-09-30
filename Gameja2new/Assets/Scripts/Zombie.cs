@@ -8,7 +8,7 @@ public class Zombie : MonoBehaviour
 {
     [SerializeField] 
     float moveSpeed = 2f;
-
+    private Animator animator;
     [SerializeField] GameObject medicine;
 
     int bingo;
@@ -18,7 +18,7 @@ public class Zombie : MonoBehaviour
     Rigidbody2D rb;
     Vector3 moveDirection;
     private GameManager gameManager;
-    public GameObject medicine;
+    
 
 
     [SerializeField]
@@ -32,9 +32,10 @@ public class Zombie : MonoBehaviour
     private void Start()
     {
         timerScript = FindAnyObjectByType<Timer>();
+        animator = GetComponent<Animator>();
 
         tarjet = GameObject.FindGameObjectWithTag("Player").transform;
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
@@ -47,18 +48,14 @@ public class Zombie : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-        
-    }
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
         {
             Debug.Log("le diste");
-            gameManager.AddZombieLoopCount();
+            
             
             TakeDamage();
     
@@ -88,8 +85,9 @@ public class Zombie : MonoBehaviour
         if (health == 0)
         {
             // Put some animations, sounds  and juice HERE
+            
             Destroy(gameObject);
-
+            animator.SetBool("death", true);
             bingo = Random.Range(0, 3);
             switch (bingo) {
                 case 2: 
