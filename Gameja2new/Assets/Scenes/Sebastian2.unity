@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &294217589
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.279646
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -30.297747
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708193772508319963, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808416144209645395, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
+      propertyPath: m_Name
+      value: Zombie
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9377c47140598e54486b73df4d55dae5, type: 3}
 --- !u!1 &380636165
 GameObject:
   m_ObjectHideFlags: 3
@@ -325,7 +382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679807211}
   serializedVersion: 2
-  m_LocalRotation: {x: 1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -1e-45, z: -0, w: 1}
   m_LocalPosition: {x: 5.3953204, y: -0.5613425, z: -9.911925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -642,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062516348}
   serializedVersion: 2
-  m_LocalRotation: {x: 1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -1e-45, z: -0, w: 1}
   m_LocalPosition: {x: 5.3953204, y: -0.5613425, z: -9.911925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -758,7 +815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1176178596
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1158,7 +1215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.75, y: -64.2}
+  m_AnchoredPosition: {x: -57, y: -33}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632138776
@@ -1174,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1600,3 +1657,4 @@ SceneRoots:
   - {fileID: 4287727056628757554}
   - {fileID: 407132197}
   - {fileID: 730915665}
+  - {fileID: 294217589}

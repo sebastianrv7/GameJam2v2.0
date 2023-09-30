@@ -8,7 +8,7 @@ public class Zombie : MonoBehaviour
 {
     [SerializeField] 
     float moveSpeed = 2f;
-
+    private Animator animator;
     [SerializeField] GameObject medicine;
 
     int bingo;
@@ -32,6 +32,7 @@ public class Zombie : MonoBehaviour
     private void Start()
     {
         timerScript = FindAnyObjectByType<Timer>();
+        animator = GetComponent<Animator>();
 
         tarjet = GameObject.FindGameObjectWithTag("Player").transform;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
@@ -84,8 +85,9 @@ public class Zombie : MonoBehaviour
         if (health == 0)
         {
             // Put some animations, sounds  and juice HERE
+            
             Destroy(gameObject);
-
+            animator.SetBool("death", true);
             bingo = Random.Range(0, 3);
             switch (bingo) {
                 case 2: 
