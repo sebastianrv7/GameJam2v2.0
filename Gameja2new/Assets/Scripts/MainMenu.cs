@@ -7,8 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Player Movement");
+        SceneManager.LoadScene("GameScene");
     }
-
-
 }
