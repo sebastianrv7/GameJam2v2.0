@@ -127975,7 +127975,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.3584906, g: 0.2790139, b: 0.3408291, a: 1}
+  m_Color: {r: 0.5, g: 0.4457547, b: 0.48915094, a: 1}
   m_Origin: {x: -65, y: -69, z: 0}
   m_Size: {x: 138, y: 128, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -128380,7 +128380,7 @@ GameObject:
   - component: {fileID: 380636169}
   - component: {fileID: 380636168}
   - component: {fileID: 380636167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128605,7 +128605,7 @@ GameObject:
   - component: {fileID: 679807212}
   - component: {fileID: 679807214}
   - component: {fileID: 679807213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128662,7 +128662,7 @@ MonoBehaviour:
   m_Follow: {fileID: 407132197}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10.18
+    OrthographicSize: 7.28
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -129020,7 +129020,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.18
+  orthographic size: 7.28
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -129242,9 +129242,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1244783123}
-        m_TargetAssemblyTypeName: EngingScene, Assembly-CSharp
-        m_MethodName: EndingScene
+      - m_Target: {fileID: 730915664}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Epilogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

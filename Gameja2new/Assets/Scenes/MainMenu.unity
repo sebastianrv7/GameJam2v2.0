@@ -1553,7 +1553,7 @@ GameObject:
   - component: {fileID: 524879751}
   - component: {fileID: 524879750}
   - component: {fileID: 524879749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1603,7 +1603,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.6005583
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1628,7 +1628,7 @@ Transform:
   m_GameObject: {fileID: 524879748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -6.835165, y: -9.116615, z: -7.192819}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7025,7 +7025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7273476, g: 0.8018868, b: 0.7224546, a: 0.5254902}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
