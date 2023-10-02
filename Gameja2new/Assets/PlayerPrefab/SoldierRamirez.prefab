@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balaPrefab: {fileID: 2361929129480423702, guid: 2e40c221ea001064e9c1da356901d6ab, type: 3}
-  tiempoEntreDisparos: 1
+  tiempoEntreDisparos: 0.5
 --- !u!1 &2612414811522131325
 GameObject:
   m_ObjectHideFlags: 0

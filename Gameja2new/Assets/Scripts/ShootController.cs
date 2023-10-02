@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootController : MonoBehaviour
 {
     public GameObject balaPrefab; // Arrastra aquí el Prefab de la bala en el Inspector
-    public float tiempoEntreDisparos = 1f; // Tiempo en segundos entre disparos
+    public float tiempoEntreDisparos = 0f; // Tiempo en segundos entre disparos
     private float tiempoUltimoDisparo = 0f; // Guarda el tiempo del último disparo
 
     private void Update()
