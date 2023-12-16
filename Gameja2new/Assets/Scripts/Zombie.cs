@@ -54,11 +54,7 @@ public class Zombie : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
-            Debug.Log("le diste");
-            
-            
             TakeDamage();
-    
         }
 
         if (collision.CompareTag("Player"))
